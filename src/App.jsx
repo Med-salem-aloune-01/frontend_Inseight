@@ -3,7 +3,7 @@ import Login from './pages/Loginpage';
 import Signuppage from './pages/Signuppage';
 import ProtectedRoute from './components/ProtectedRoute';
 import DashboardLayout from './components/DashboardLayout';
-import AdminDashboard from './pages/AdminDashboard';
+import AdminDashboard from './pages/Admindashboard';
 import TeacherDashboard from './pages/Teacherdashboard';
 import Studentdashboard from './pages/Studentdashboard';
 import StudentQuizzes from './pages/Studentquizzes';
