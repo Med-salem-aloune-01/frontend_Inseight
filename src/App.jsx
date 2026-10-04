@@ -61,7 +61,7 @@ export default function App() {
           <Route path='student/settings' element={<SettingsPage/>}/>
         </Route>
       </Route>
-        <Route path="/Signuppage" element={<Signuppage />} />
+        <Route path="/signup" element={<Signuppage />} />
         <Route path="*" element={<Login />} />
       </Routes>
     </BrowserRouter>
