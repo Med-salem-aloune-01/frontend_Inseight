@@ -4,7 +4,7 @@ import Signuppage from './pages/Signuppage';
 import ProtectedRoute from './components/ProtectedRoute';
 import DashboardLayout from './components/DashboardLayout';
 import AdminDashboard from './pages/AdminDashboard';
-import TeacherDashboard from './pages/TeacherDashboard';
+import TeacherDashboard from './pages/Teacherdashboard';
 import Studentdashboard from './pages/Studentdashboard';
 import StudentQuizzes from './pages/Studentquizzes';
 import Admincourses from "./pages/AdminCourse";
