@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import api from '../api/axios';
 
 export default function SettingsPage() {
   const token = localStorage.getItem('token');
@@ -11,7 +12,7 @@ export default function SettingsPage() {
   useEffect(() => {
     const fetchMe = async () => {
       try {
-        const res = await fetch('http://localhost:5001/api/users/me', {
+        const res = await fetch('users/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
