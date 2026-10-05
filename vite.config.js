@@ -8,7 +8,7 @@ export default defineConfig({
 
     proxy: {
       '/api': {
-        target: 'https://backend-inseight.onrender.com',
+        target: 'http://localhost:5001',
         changeOrigin: true,
       },
     },
