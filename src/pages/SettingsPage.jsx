@@ -10,28 +10,19 @@ export default function SettingsPage() {
   const [fetching, setFetching] = useState(true);
 
   useEffect(() => {
-    const fetchMe = async () => {
-      try {
-        const res = await fetch('users/me', {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-        const data = await res.json();
-        if (data.success) {
-          setForm({
-            firstName: data.data.firstName || '',
-            lastName: data.data.lastName || '',
-            email: data.data.email || '',
-            phone: data.data.phone || '',
-          });
-        }
-      } catch {
-        setMessage({ type: 'error', text: 'Impossible de charger le profil' });
-      } finally {
-        setFetching(false);
-      }
-    };
-    fetchMe();
-  }, [token]);
+  api.get('/users/me')
+    .then((res) => {
+      const u = res.data.data;
+      setForm({
+        firstName: u.firstName || '',
+        lastName: u.lastName || '',
+        email: u.email || '',
+        phone: u.phone || '',
+      });
+    })
+    .catch(() => setMessage({ type: 'error', text: 'Impossible de charger le profil' }))
+    .finally(() => setFetching(false));
+}, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
