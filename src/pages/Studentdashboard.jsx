@@ -11,6 +11,7 @@ export default function Studentdashboard() {
     avgGrade: 0,
     courses: [],
   });
+  const [noLevel, setNoLevel] = useState(false);
   const [filter, setFilter] = useState("all");
 
   const filteredCourses = data.courses.filter((c) => {
@@ -38,7 +39,7 @@ export default function Studentdashboard() {
     setLoading(true);
 
     return Promise.all([
-      api.get(`/cours?page=${page}&limit=${limit}`),
+      api.get(`/cours/student?page=${page}&limit=${limit}`),
       api.get("/analytics/student"),
     ])
       .then(([coursesRes, analyticsRes]) => {
@@ -46,6 +47,7 @@ export default function Studentdashboard() {
         const stats = analyticsRes.data.data;
 
         setPages(coursesRes.data.pages || 1);
+        setNoLevel(coursesRes.data.noLevel || false);
 
         setData({
           enrolled: stats.totalCourses ?? 0,
@@ -258,10 +260,7 @@ export default function Studentdashboard() {
               {filteredCourses.length === 0 ? (
 
                 <tr>
-                  <td
-                    colSpan={4}
-                    className="px-6 py-16 text-center"
-                  >
+                  <td colSpan={5} className="px-6 py-16 text-center">
                     <div className="flex flex-col items-center">
 
                       <div className="w-14 h-14 rounded-2xl bg-slate-800 light:bg-gray-100 flex items-center justify-center mb-4">
@@ -269,10 +268,14 @@ export default function Studentdashboard() {
                       </div>
 
                       <p className="font-medium text-slate-300 light:text-gray-700">
-                        No courses yet
+                        {noLevel ? "Your level hasn't been assigned yet" : "No courses yet"}
                       </p>
 
-
+                      {noLevel && (
+                        <p className="text-xs text-slate-500 light:text-gray-400 mt-1">
+                          Please contact your administrator.
+                        </p>
+                      )}
 
                     </div>
                   </td>

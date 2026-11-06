@@ -60,7 +60,7 @@ export default function AssignStudentInfo() {
 
     setLoading(true);
     try {
-      await api.put(`/users/${selectedStudent}/assign-info`, form);
+      await api.put(`/admin/${selectedStudent}/assign-info`, form);
       setSuccess("Informations mises à jour avec succès");
     } catch (err) {
       setError(err.response?.data?.message || "Échec de la mise à jour");

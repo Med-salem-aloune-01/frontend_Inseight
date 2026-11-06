@@ -12,6 +12,7 @@ const NAV = {
     { to: '/admin/analytics', label: 'Analytics' },
     { to:'/admin/assign', label: 'Assign'},
     { to: '/admin/settings', label: 'Settings' },
+    { to: '/admin/messages', label: 'Messages' },
     
   ],
   teacher: [
@@ -19,6 +20,7 @@ const NAV = {
     { to: '/teacher/quizzes', label: 'Quizzes' },
     { to: '/teacher/students', label: 'Students' },
     { to: '/teacher/settings', label: 'Settings' },
+    { to: '/teacher/Messages', label: 'Messages' },
   ],
   student: [
     { to: '/student', label: 'My Courses' },
@@ -26,6 +28,7 @@ const NAV = {
     { to: '/student/progress', label: 'My Progress' },
     { to: '/student/certificates', label: 'Certificates' },
     { to: '/student/settings', label: 'Settings' },
+    { to: '/student/contact', label: 'Contact' },
   ],
 };
 

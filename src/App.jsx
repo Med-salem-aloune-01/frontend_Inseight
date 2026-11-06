@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/Loginpage';
 import Signuppage from './pages/Signuppage';
-import ProtectedRoute from './components/Protectedroute';
-import DashboardLayout from './components/Dashboardlayout';
+import ProtectedRoute from './components/ProtectedRoute';
+import DashboardLayout from './components/DashboardLayout';
 import AdminDashboard from './pages/Admindashboard';
 import TeacherDashboard from './pages/Teacherdashboard';
 import Studentdashboard from './pages/Studentdashboard';
@@ -20,6 +20,8 @@ import QuizPage from "./pages/Quizeecontent";
 import Certificates from './pages/Certificat';
 import SettingsPage from './pages/SettingsPage';
 import AssignStudentInfo from './pages/Assignstudentinfo';
+import StudentContact from './pages/StudentContact';
+import Messages from './components/Messages';
 export default function App() {
   return (
     <BrowserRouter>
@@ -38,6 +40,7 @@ export default function App() {
             <Route path="/admin/analytics" element={<Analyticdashbord />} />
             <Route path="/admin/settings" element={<SettingsPage />} />
             <Route path="/admin/assign" element={<AssignStudentInfo />} />
+            <Route path="/admin/messages" element={<Messages />} />
           </Route>
         </Route>
 
@@ -47,6 +50,7 @@ export default function App() {
             <Route path="/teacher/quizzes" element={<TeacherListquizze />} />
             <Route path="/teacher/students" element={<Teacherstudent />} />
             <Route path="/teacher/settings" element={<SettingsPage />} />
+            <Route path="/teacher/messages" element={<Messages />} />
           </Route>
         </Route>
 
@@ -59,10 +63,11 @@ export default function App() {
           <Route path="/quiz/:id" element={<QuizPage />} />
           <Route path='student/certificates' element={<Certificates/>}/>
           <Route path='student/settings' element={<SettingsPage/>}/>
+          <Route path='student/contact' element={<StudentContact/>}/>
         </Route>
       </Route>
-        <Route path="/signup" element={<Signuppage />} />
-        <Route path="*" element={<Login />} />
+        <Route path="/Signuppage" element={<Signuppage />} />
+        <Route path="*" element={<Signuppage />} />
       </Routes>
     </BrowserRouter>
   );
