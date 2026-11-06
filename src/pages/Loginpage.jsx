@@ -42,7 +42,7 @@ export default function LoginPage() {
 
               <div>
                 <h1 className="text-white font-bold text-lg">
-                  EduInsight
+                  Learny
                 </h1>
                 <p className="text-slate-500 text-[10px]">
                   SMART EDUCATION
