@@ -26,7 +26,6 @@ const NAV = {
     { to: '/student', label: 'My Courses' },
     { to: '/student/quizzes', label: 'My Quizzes' },
     { to: '/student/progress', label: 'My Progress' },
-    { to: '/student/certificates', label: 'Certificates' },
     { to: '/student/settings', label: 'Settings' },
     { to: '/student/contact', label: 'Contact' },
   ],
