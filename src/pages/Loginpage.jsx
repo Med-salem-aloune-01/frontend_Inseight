@@ -234,7 +234,7 @@ export default function LoginPage() {
                       Email
                     </p>
                     <p className="text-slate-300 text-[10px] break-all mt-0.5">
-                      salemaloune023@gmail.com
+                      salemaloune001@gmail.com
                     </p>
                   </div>
 
@@ -243,7 +243,7 @@ export default function LoginPage() {
                       Password
                     </p>
                     <p className="text-slate-300 text-[10px] mt-0.5 font-mono">
-                      123456
+                      000000
                     </p>
                   </div>
                 </div>
