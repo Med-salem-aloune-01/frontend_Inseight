@@ -17,7 +17,6 @@ import Analyticdashbord from "./pages/AnalyticsDashboard";
 import Studentanalitycs from "./pages/AnalytcStudent";
 import CourseContent from "./pages/Coursecontent";
 import QuizPage from "./pages/Quizeecontent";
-import Certificates from './pages/Certificat';
 import SettingsPage from './pages/SettingsPage';
 import AssignStudentInfo from './pages/Assignstudentinfo';
 import StudentContact from './pages/StudentContact';
@@ -61,7 +60,6 @@ export default function App() {
           <Route path="/student/progress" element={<Studentanalitycs />} />
           <Route path="/student/courses/:id" element={<CourseContent />} />
           <Route path="/quiz/:id" element={<QuizPage />} />
-          <Route path='student/certificates' element={<Certificates/>}/>
           <Route path='student/settings' element={<SettingsPage/>}/>
           <Route path='student/contact' element={<StudentContact/>}/>
         </Route>
